@@ -9,18 +9,18 @@ namespace spec
 	TEST_CLASS(Consonants_VowelsSpec)
 	{
 	public:
+		
 		TEST_METHOD(OneLetter)
 		{
 			char str[] = "a";
-			int consonants ;
-			int vowels ;
+			int consonants;
+			int vowels;
 			count_vowels_and_consonants(str, &consonants, &vowels);
 
 			Assert::AreEqual(consonants, 0, L"Consonants should be 0", LINE_INFO());
 
 			Assert::AreEqual(vowels, 1, L"Vowels should be 1 for a", LINE_INFO());
 		}
-
 		TEST_METHOD(EmptyString)
 		{
 			char str[] = "";
@@ -32,6 +32,7 @@ namespace spec
 
 			Assert::AreEqual(vowels, 0, L"Vowels should be 0 for ", LINE_INFO());
 		}
+
 		TEST_METHOD(ComplexString)
 		{
 			char str[] = "a .?2343 BCDE mu";
